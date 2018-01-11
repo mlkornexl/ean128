@@ -1,0 +1,268 @@
+\documentclass[parskip=half]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{lastpage}
+
+\makeatletter
+
+\def\eanFontA{font A}
+\def\eanFontB{font B}
+\def\eanFontC{font C}
+\def\eanShift{shift A and B}
+\def\eanSpace{shift A and B}
+
+\newcount\ean@value
+\newcount\ean@checksum
+\newcount\ean@weight
+
+
+\def\ean@@A#1\@nnil{%
+    \@tempcnta=`#1
+    \ifnum\@tempcnta<32
+      \advance\@tempcnta by 64
+    \else\ifnum\@tempcnta<96
+      \advance\@tempcnta by -32
+    \else
+      \errmessage{character #1 (\the\@tempcnta) not supported with font A}
+    \fi\fi%
+    \ean@@C\@tempcnta\@nnil%
+}
+
+\def\ean@@B#1\@nnil{%
+  \@tempcnta=`#1
+  \ifnum\@tempcnta<128
+    \advance\@tempcnta by -32
+  \else
+    \errmessage{character #1 (\the\@tempcnta) not supported with font B}
+  \fi%
+  \ean@@C\@tempcnta\@nnil%
+}
+
+\def\ean@@C#1\@nnil{%
+  \advance\ean@weight by 1
+  \ean@value=#1
+  \multiply\ean@value by \ean@weight
+  \advance\ean@checksum by \ean@value
+  \char#1%
+}
+
+
+
+\def\ean@fontA#1{%
+  \ifx\@nnil#1\relax
+    \let\ean@font=\relax
+  \else\ifx\eanFontA#1\relax
+    \relax%
+  \else\ifx\eanFontB#1\relax
+    \ean@@C 100\@nnil%
+    \let\ean@font=\ean@fontB
+  \else\ifx\eanFontC#1\relax
+    \ean@@C 99\@nnil%
+    \let\ean@font=\ean@fontC
+  \else\ifx\eanShift#1\relax
+    \let\ean@font=\ean@shiftA
+  \else\ifx\eanSpace#1\relax
+    \ean@@C 0\@nnil%
+  \else
+    \edef\@tempa{#1}%
+    \expandafter\ean@@A\@tempa\@nnil%
+  \fi\fi\fi\fi\fi\fi%
+  \ean@font
+}
+
+\def\ean@fontB#1{%
+  \ifx\@nnil#1\relax
+    \let\ean@font=\relax
+  \else\ifx\eanFontA#1\relax
+    \ean@@C 101\@nnil%
+    \let\ean@font=\ean@fontA
+  \else\ifx\eanFontB#1\relax
+    \relax%
+  \else\ifx\eanFontC#1\relax
+    \ean@@C 99\@nnil%
+    \let\ean@font=\ean@fontC
+  \else\ifx\eanShift#1\relax
+    \let\ean@font=\ean@shiftB
+  \else\ifx\eanSpace#1\relax
+    \ean@@C 0\@nnil%
+  \else
+    \edef\@tempa{#1}%
+    \expandafter\ean@@B\@tempa\@nnil%
+  \fi\fi\fi\fi\fi\fi%
+  \ean@font
+}
+
+\def\ean@fontC#1#2{%
+  \ifx\@nnil#1\relax
+    \let\ean@font=\relax
+  \else\ifx\eanFontA#1\relax
+    \ean@@C 101\@nnil%
+    \ean@@A #2\@nnil%
+    \let\ean@font=\ean@fontA
+  \else\ifx\eanFontB#1\relax
+    \ean@@C 100\@nnil%
+    \ean@@B #2\@nnil%
+    \let\ean@font=\ean@fontB
+  \else\ifx\eanFontC#1\relax
+    \relax%
+  \else\ifx\eanShift#1\relax
+    \ean@@C 98\@nnil%
+  \else\ifx\eanSpace#1\relax
+    \ean@@C 0\@nnil%
+  \else
+    \edef\@tempa{#1#2}%
+    \expandafter\ean@@C\@tempa\@nnil%
+  \fi\fi\fi\fi\fi\fi%
+  \ean@font
+}
+
+\def\ean@shiftA#1{%
+  \edef\@tempa{#1}%
+  \ean@@C 98\@nnil\expandafter\ean@@B\@tempa\@nnil%
+  \let\ean@font=\ean@fontA
+  \ean@font
+}
+
+\def\ean@shiftB#1{%
+  \edef\@tempa{#1}%
+  \ean@@C 98\@nnil\expandafter\ean@@A\@tempa\@nnil%
+  \let\ean@font=\ean@fontB
+  \ean@font
+}
+
+
+
+
+\newcommand{\eanCodeA}[1]{%
+  \let\ean@font=\ean@fontA
+  \bgroup%
+    \usefont{U}{code128}{m}{n}%
+    \fontsize{32}{48}\selectfont%
+    \char103\char102%
+    \ean@weight=1
+    \ean@checksum=205
+    \ean@font#1\@nnil\relax%
+    %
+    \eanChecksumDigit{\ean@checksum}%
+    %
+    \char106%
+  \egroup%
+}
+\newcommand{\eanCodeB}[1]{%
+  \let\ean@font=\ean@fontB
+  \bgroup%
+    \usefont{U}{code128}{m}{n}%
+    \fontsize{32}{48}\selectfont%
+    \char104\char102%
+    \ean@weight=1
+    \ean@checksum=206
+    \ean@font#1\@nnil\relax%
+    %
+    \eanChecksumDigit{\ean@checksum}%
+    %
+    \char106%
+  \egroup%
+}
+\newcommand{\eanCodeC}[1]{%
+  \let\ean@font=\ean@fontC
+  \bgroup%
+    \usefont{U}{code128}{m}{n}%
+    \fontsize{32}{48}\selectfont%
+    \char105\char102%
+    \ean@weight=1
+    \ean@checksum=207
+    \ean@font#1\@nnil\relax%
+    %
+    \eanChecksumDigit{\ean@checksum}%
+    %
+    \char106%
+  \egroup%
+}
+
+\newcommand{\eanChecksumDigit}[1]{%
+  \@tempcnta=#1
+  \@tempcntb=#1
+  \divide\@tempcntb by 103
+  \multiply\@tempcntb by -103
+  \advance\@tempcnta by \@tempcntb
+  \char\@tempcnta%
+}
+
+\def\ean@codeC#1\@nnil{%
+  \eanCodeC{#1}%
+}
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi%
+}
+
+\newcommand{\eanPage}[1][]{%
+  \@ifundefined{r@LastPage}{%
+    \@tempcnta=0%
+  }{%
+    \@tempcnta=\pageref{LastPage}%
+  }
+  \edef\@tempb{#1\twodigits{\thepage}\twodigits{\the\@tempcnta}}%
+  \expandafter\ean@codeC\@tempb\@nnil%
+}
+
+\makeatother
+
+
+\usepackage{scrlayer-scrpage}
+\cfoot{\eanPage[12\noexpand\eanFontA .45.\noexpand\eanFontC]}
+
+\usepackage{pgfkeys}
+
+\pgfk
+
+\pgfkeyssetvalue{footer}{12\noexpand\eanFontA .45.\noexpand\eanFontC}
+
+
+
+\begin{document}
+see https://tex.stackexchange.com/questions/39719/calculating-checksum for details
+
+\section{VIP Mobile Test}
+\eanCodeC{\eanFontA RA\eanFontC 645311544617} (RA645311544617)
+
+\eanCodeC{16\eanFontA .11.\eanFontC 2017} (16.11.2017)
+
+\eanCodeC{140497513117\eanFontA 0} (1404975131170)
+
+\section{Page}
+
+\pgfkeysvalueof{footer}
+
+\eanPage[\pgfkeysvalueof{footer}]
+
+\eanPage[12\noexpand\eanFontA .45.\noexpand\eanFontC]
+
+\eanCodeC{12\eanFontA .45.\eanFontC 0102}
+
+\eanCodeC{12\eanFontA .45.\eanFontC 0100}
+
+\makeatletter
+\@ifundefined{r@LastPage}{not defined}{HURRAY!}
+\makeatother
+
+\section{EAN 128 Barcode}
+
+
+\newpage
+
+\section{Second page}
+
+
+%\eanC{021204}
+
+%\makeatletter
+%\ean@A A\@nnil
+%\makeatother
+%\checksum{383480757}%5
+%
+%\checksum{055215295}%1
+%
+%\checksum{020113448}%9
+\end{document}

@@ -1,0 +1,17 @@
+%Filename: ucode128.fd
+%Created by: tex code128-drv
+%Created using fontinst v1.933
+
+%THIS FILE SHOULD BE PUT IN A TEX INPUTS DIRECTORY
+
+\ProvidesFile{ucode128.fd}
+   [2017/12/22 Fontinst v1.933 font definitions for U/code128.]
+
+\DeclareFontFamily{U}{code128}{}
+
+\DeclareFontShape{U}{code128}{m}{n}{
+   <-> code128--base
+}{}
+
+
+\endinput

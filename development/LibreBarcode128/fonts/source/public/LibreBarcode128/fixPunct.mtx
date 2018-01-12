@@ -1,0 +1,133 @@
+\relax
+
+\metrics
+
+\resetglyph{visiblespace}
+  \glyph{code.space}{1000}
+\endresetglyph
+
+\resetglyph{exclam}
+  \glyph{code.exclam}{1000}
+\endresetglyph
+
+\resetglyph{quotedbl}
+  \glyph{code.quotedbl}{1000}
+\endresetglyph
+
+\resetglyph{numbersign}
+  \glyph{code.numbersign}{1000}
+\endresetglyph
+
+\resetglyph{dollar}
+  \glyph{code.dollar}{1000}
+\endresetglyph
+
+\resetglyph{percent}
+  \glyph{code.percent}{1000}
+\endresetglyph
+
+\resetglyph{ampersand}
+  \glyph{code.ampersand}{1000}
+\endresetglyph
+
+\resetglyph{quotesingle}
+  \glyph{code.quotesingle}{1000}
+\endresetglyph
+
+\resetglyph{parenleft}
+  \glyph{code.parenleft}{1000}
+\endresetglyph
+
+\resetglyph{parenright}
+  \glyph{code.parenright}{1000}
+\endresetglyph
+
+\resetglyph{asterisk}
+  \glyph{code.asterisk}{1000}
+\endresetglyph
+
+\resetglyph{plus}
+  \glyph{code.plus}{1000}
+\endresetglyph
+
+\resetglyph{comma}
+  \glyph{code.comma}{1000}
+\endresetglyph
+
+\resetglyph{hyphen}
+  \glyph{code.minus}{1000}
+\endresetglyph
+
+\resetglyph{period}
+  \glyph{code.period}{1000}
+\endresetglyph
+
+\resetglyph{slash}
+  \glyph{code.slash}{1000}
+\endresetglyph
+
+\resetglyph{colon}
+  \glyph{code.colon}{1000}
+\endresetglyph
+
+\resetglyph{semicolon}
+  \glyph{code.semicolon}{1000}
+\endresetglyph
+
+\resetglyph{greater}
+  \glyph{code.greater}{1000}
+\endresetglyph
+
+\resetglyph{equal}
+  \glyph{code.equal}{1000}
+\endresetglyph
+
+\resetglyph{less}
+  \glyph{code.less}{1000}
+\endresetglyph
+
+\resetglyph{question}
+  \glyph{code.question}{1000}
+\endresetglyph
+
+\resetglyph{bracketleft}
+  \glyph{code.bracketleft}{1000}
+\endresetglyph
+
+\resetglyph{backslash}
+  \glyph{code.backslash}{1000}
+\endresetglyph
+
+\resetglyph{bracketright}
+  \glyph{code.bracketright}{1000}
+\endresetglyph
+
+\resetglyph{circumflex}
+  \glyph{code.asciicircum}{1000}
+\endresetglyph
+
+\resetglyph{underscore}
+  \glyph{code.underscore}{1000}
+\endresetglyph
+
+\resetglyph{grave}
+  \glyph{code.grave}{1000}
+\endresetglyph
+
+\resetglyph{braceleft}
+  \glyph{code.braceleft}{1000}
+\endresetglyph
+
+\resetglyph{bar}
+  \glyph{code.bar}{1000}
+\endresetglyph
+
+\resetglyph{braceright}
+  \glyph{code.braceright}{1000}
+\endresetglyph
+
+\resetglyph{tilde}
+  \glyph{code.asciitilde}{1000}
+\endresetglyph
+
+\endmetrics

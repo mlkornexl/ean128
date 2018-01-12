@@ -1,0 +1,78 @@
+\input fontinst.sty
+\needsfontinstversion{1.926}
+
+\recordtransforms{LibreBarcode128-rec.tex}
+
+\transformfont{LibreBarcode128-Regular--base}%
+  {\reencodefont{LibreBarcode128}{\fromafm{LibreBarcode128-Regular}}}
+\transformfont{LibreBarcode128Text-Regular--base}%
+  {\reencodefont{LibreBarcode128}{\fromafm{LibreBarcode128Text-Regular}}}
+
+\installfonts
+\installfamily{U}{LibreBarcode128}{}
+
+\installrawfont{LibreBarcode128-Regular--base}%
+  {LibreBarcode128-Regular--base}%
+  {txtfdmns,LibreBarcode128}%
+  {U}{LibreBarcode128}{m}{n}{}
+
+\installfont{OT1--LibreBarcode128-Regular}%
+  {LibreBarcode128-Regular--base,fixPunct}%
+  {txtfdmns,fixAlphaNum,ot1}%
+  {OT1}{LibreBarcode128}{m}{n}{}
+  
+\endinstallfonts
+
+\installfonts
+\installfamily{OT1}{LibreBarcode128}{}
+
+\installfont{OT1--LibreBarcode128-Regular}%
+  {LibreBarcode128-Regular--base,fixPunct}%
+  {txtfdmns,fixAlphaNum,ot1}%
+  {OT1}{LibreBarcode128}{m}{n}{}
+  
+\endinstallfonts
+
+\installfonts
+\installfamily{T1}{LibreBarcode128}{}
+
+\installfont{T1--LibreBarcode128-Regular}%
+  {LibreBarcode128-Regular--base,fixPunct}%
+  {txtfdmns,fixAlphaNum,t1}%
+  {T1}{LibreBarcode128}{m}{n}{}
+  
+\endinstallfonts
+
+
+\installfonts
+\installfamily{U}{LibreBarcode128Text}{}
+
+\installrawfont{LibreBarcode128Text-Regular--base}%
+  {LibreBarcode128Text-Regular--base}%
+  {txtfdmns,LibreBarcode128}%
+  {U}{LibreBarcode128Text}{m}{n}{}
+  
+\endinstallfonts
+
+\installfonts
+\installfamily{OT1}{LibreBarcode128Text}{}
+
+\installfont{OT1--LibreBarcode128Text-Regular}%
+  {LibreBarcode128Text-Regular--base,fixPunct}%
+  {txtfdmns,fixAlphaNum,ot1}%
+  {OT1}{LibreBarcode128}{m}{n}{}
+  
+\endinstallfonts
+
+\installfonts
+\installfamily{T1}{LibreBarcode128Text}{}
+
+\installfont{T1--LibreBarcode128Text-Regular}%
+  {LibreBarcode128Text-Regular--base,fixPunct}%
+  {txtfdmns,fixAlphaNum,t1}%
+  {T1}{LibreBarcode128}{m}{n}{}
+  
+\endinstallfonts
+
+\endrecordtransforms
+\bye

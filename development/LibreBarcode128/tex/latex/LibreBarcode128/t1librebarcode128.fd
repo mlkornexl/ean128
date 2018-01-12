@@ -1,0 +1,17 @@
+%Filename: t1librebarcode128.fd
+%Created by: tex LibreBarcode128-drv
+%Created using fontinst v1.933
+
+%THIS FILE SHOULD BE PUT IN A TEX INPUTS DIRECTORY
+
+\ProvidesFile{t1librebarcode128.fd}
+   [2018/01/12 Fontinst v1.933 font definitions for T1/LibreBarcode128.]
+
+\DeclareFontFamily{T1}{LibreBarcode128}{}
+
+\DeclareFontShape{T1}{LibreBarcode128}{m}{n}{
+   <-> T1--LibreBarcode128Text-Regular
+}{}
+
+
+\endinput

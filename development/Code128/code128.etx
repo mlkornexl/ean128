@@ -1,0 +1,176 @@
+\relax
+\documentclass[twocolumn]{article}
+\usepackage[specification]{fontdoc}
+\begin{document}
+\encoding
+\setslot{space}
+  \Unicode{uni0020}{SPACE}
+\endsetslot
+\setslot{exclam}
+  \Unicode{uni0021}{EXCLAMATION MARK}
+\endsetslot
+\setslot{numbersign}
+  \Unicode{uni0022}{NUMBER SIGN}
+\endsetslot
+\setslot{dollar}
+  \Unicode{uni0023}{DOLLAR SIGN}
+\endsetslot
+\setslot{percent}
+  \Unicode{uni0024}{PERCENTAGE SIGN}
+\endsetslot
+\setslot{ampersand}
+  \Unicode{uni0025}{AMPERSAND SIGN}
+\endsetslot
+\setslot{quoteright}
+  \Unicode{uni0026}{ENGLISH CLOSING SINGLE QUOTE MARK}
+\endsetslot
+%\setslot{}
+  %\Unicode{uni0027}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni0028}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni0029}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni002A}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni002B}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni002C}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni002D}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni002E}{}
+%\endsetslot
+%\setslot{}
+  %\Unicode{uni002F}{}
+%\endsetslot
+%\setslot{uni0020}\endsetslot
+%\setslot{uni0021}\endsetslot
+%\setslot{uni0022}\endsetslot
+%\setslot{uni0023}\endsetslot
+%\setslot{uni0024}\endsetslot
+%\setslot{uni0025}\endsetslot
+%\setslot{uni0026}\endsetslot
+%\setslot{uni0027}\endsetslot
+\setslot{uni0028}
+  \Unicode{uni0028}{OPENING PARANTHESIS}
+  \comment{The opening parenthesis `('}
+\endsetslot
+\setslot{uni0029}\endsetslot
+\setslot{uni002A}\endsetslot
+\setslot{uni002B}\endsetslot
+\setslot{uni002C}\endsetslot
+\setslot{uni002D}\endsetslot
+\setslot{uni002E}\endsetslot
+\setslot{uni002F}\endsetslot
+
+\setslot{uni0030}\endsetslot
+\setslot{uni0031}\endsetslot
+\setslot{uni0032}\endsetslot
+\setslot{uni0033}\endsetslot
+\setslot{uni0034}\endsetslot
+\setslot{uni0035}\endsetslot
+\setslot{uni0036}\endsetslot
+\setslot{uni0037}\endsetslot
+\setslot{uni0038}\endsetslot
+\setslot{uni0039}\endsetslot
+\setslot{uni003A}\endsetslot
+\setslot{uni003B}\endsetslot
+\setslot{uni003C}\endsetslot
+\setslot{uni003D}\endsetslot
+\setslot{uni003E}\endsetslot
+\setslot{uni003F}\endsetslot
+% 0x20
+\setslot{uni0040}\endsetslot
+\setslot{uni0041}\endsetslot
+\setslot{uni0042}\endsetslot
+\setslot{uni0043}\endsetslot
+\setslot{uni0044}\endsetslot
+\setslot{uni0045}\endsetslot
+\setslot{uni0046}\endsetslot
+\setslot{uni0047}\endsetslot
+\setslot{uni0048}\endsetslot
+\setslot{uni0049}\endsetslot
+\setslot{uni004A}\endsetslot
+\setslot{uni004B}\endsetslot
+\setslot{uni004C}\endsetslot
+\setslot{uni004D}\endsetslot
+\setslot{uni004E}\endsetslot
+\setslot{uni004F}\endsetslot
+% 0x30
+\setslot{uni0050}\endsetslot
+\setslot{uni0051}\endsetslot
+\setslot{uni0052}\endsetslot
+\setslot{uni0053}\endsetslot
+\setslot{uni0054}\endsetslot
+\setslot{uni0055}\endsetslot
+\setslot{uni0056}\endsetslot
+\setslot{uni0057}\endsetslot
+\setslot{uni0058}\endsetslot
+\setslot{uni0059}\endsetslot
+\setslot{uni005A}\endsetslot
+\setslot{uni005B}\endsetslot
+\setslot{uni005C}\endsetslot
+\setslot{uni005D}\endsetslot
+\setslot{uni005E}\endsetslot
+\setslot{uni005F}\endsetslot
+% 0x40
+\setslot{uni0060}\endsetslot
+\setslot{uni0061}\endsetslot
+\setslot{uni0062}\endsetslot
+\setslot{uni0063}\endsetslot
+\setslot{uni0064}\endsetslot
+\setslot{uni0065}\endsetslot
+\setslot{uni0066}\endsetslot
+\setslot{uni0067}\endsetslot
+\setslot{uni0068}\endsetslot
+\setslot{uni0069}\endsetslot
+\setslot{uni006A}\endsetslot
+\setslot{uni006B}\endsetslot
+\setslot{uni006C}\endsetslot
+\setslot{uni006D}\endsetslot
+\setslot{uni006E}\endsetslot
+\setslot{uni006F}\endsetslot
+% 0x50
+\setslot{uni0070}\endsetslot
+\setslot{uni0071}\endsetslot
+\setslot{uni0072}\endsetslot
+\setslot{uni0073}\endsetslot
+\setslot{uni0074}\endsetslot
+\setslot{uni0075}\endsetslot
+\setslot{uni0076}\endsetslot
+\setslot{uni0077}\endsetslot
+\setslot{uni0078}\endsetslot
+\setslot{uni0079}\endsetslot
+\setslot{uni007A}\endsetslot
+\setslot{uni007B}\endsetslot
+\setslot{uni007C}\endsetslot
+\setslot{uni007D}\endsetslot
+\setslot{uni007E}\endsetslot
+\setslot{uni00C3}\endsetslot
+%0x60
+\setslot{uni00C4}\endsetslot
+\setslot{uni00C5}\endsetslot
+\setslot{uni00C6}\endsetslot
+\setslot{uni00C7}\endsetslot
+\setslot{uni00C8}\endsetslot
+\setslot{uni00C9}\endsetslot
+\setslot{uni00CA}\endsetslot
+\setslot{uni00CB}\endsetslot
+\setslot{uni00CC}\endsetslot
+\setslot{uni00CD}\endsetslot
+\setslot{uni00CE}\endsetslot
+\setslot{index0}\endsetslot
+\setslot{index1}\endsetslot
+\setslot{index2}\endsetslot
+
+\endencoding
+
+\end{document}

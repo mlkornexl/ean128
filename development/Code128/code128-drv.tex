@@ -1,0 +1,15 @@
+\input fontinst.sty
+\needsfontinstversion{1.926}
+
+\recordtransforms{code128-rec.tex}
+
+\transformfont{code128--base}{\reencodefont{code128}{\fromafm{code128}}}
+
+\installfonts
+\installfamily{U}{code128}{}
+  \installrawfont{code128--base}{code128--base}{code128}{U}{code128}{m}{n}{}
+  
+\endinstallfonts
+
+\endrecordtransforms
+\bye
